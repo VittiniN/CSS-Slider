@@ -1,0 +1,42 @@
+.slide {
+    width: calc(25% - 20px);
+    height: 200px;
+    object-fit: cover !important;
+    justify-content: space-between;
+    margin-right: 20px;
+
+
+
+  }
+
+  .wrapper {
+    display: flex; 
+    flex-direction: row; /* This puts everything in a single line  next to eachother */
+    width: calc(100% * 4 + 60px);  /* I used this to be able to caculate the width of the wrapper evenly */
+    transform: rotate(90deg) translateY(-100vh); 
+    transform-origin: top left;
+    overflow-y: hidden; /* this will hide the over-flow in teh y axis */
+    overflow-x: scroll; /* This allows the slides to scroll horizontally instead */
+  }
+
+  .outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    /* overflow-y: hidden;
+    overflow-x: scroll; */
+    position: absolute;
+    scrollbar-width: none; /* to hide the scroll bar in firefox */
+    -ms-text-overflow-style: none; 
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* video{
+  height: 200vw;
+  width: 200vh;
+  } */
+
